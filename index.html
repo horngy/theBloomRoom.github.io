@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	https://coolors.co/palette/edc4b3-e6b8a2-deab90-d69f7e-cd9777-c38e70-b07d62-9d6b53-8a5a44-774936
+	https://pixlr.com/image-generator/
+	https://developers.google.com/maps/documentation/embed/embedding-map
+	https://cloudinary.com/tools/png-to-webp
+-->
+<html lang="en">
+	<head>
+		<title>The Bloom Room</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="#">Shop All</a></li>
+						<li>
+							<a href="#">By Occassion↓</a>
+							<ul>
+								<li><a href="#">Romance</a></li>
+								<li><a href="#">Birthday</a></li>
+								<li><a href="#">New Baby</a></li>
+								<li><a href="#">Bouquets</a></li>
+								<li><a href="#">Get Well</a></li>
+								<li><a href="#">Special</a></li>
+								<li><a href="#">Sympathy</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#" onclick="openOrCloseCart('active')">Cart(<span id="cart">0</span>)</a></li>
+					</ul>
+				</nav>
+
+				<div class="dark-background" id="dark-background" onclick="openOrCloseCart('close')"></div>
+
+				<section class="cart-list" id="cart-list">
+					<h3>Your cart</h3>
+					<h4 onclick="openOrCloseCart('close')">Continue Shopping</h4>
+					<ul class="cart-items" id="cart-items">
+						<li>Your Cart is Empty</li>
+					</ul>
+					<div class="cart-price-checkout">
+						<div class="total-price" id="total-price">Total: $0</div>
+						<button class="checkout-button">Checkout</button>
+					</div>
+				</section>
+
+				<section id="header" class="wrapper">
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">The Bloom Room</a></h1>
+							<p>Moments made to Bloom</p>
+						</div>
+				</section>
+
+				<section id="intro" class="wrapper style1">
+					<div class="title">Today's Special</div>
+					<div class="section1-everything-container">
+						<button class="section1-buttons" onclick="previousFlower()">&#10094;</button>
+						<div class="section1-flowers-container">				
+							<div class="section1-flowers">
+								<img src="images/flower1.webp" loading="lazy" class="section1-small-images" alt="flower1">
+								<div class="section1-info">
+									<h2>Flower 1</h2>
+									<p>AUD 88</p>
+									<div class="addtocart-buynow-container">
+										<button class="addtocart-buynow-buttons" onclick="addToCart('Flower1', 88)">Add to Cart</button>
+										<button class="addtocart-buynow-buttons">Buy Now</button>
+									</div>
+								</div>
+							</div>
+							<div class="section1-flowers">
+								<img src="images/flower2.webp" loading="lazy" class="section1-small-images" alt="flower2">
+								<div class="section1-info">
+									<h2>Flower 2</h2>
+									<p>AUD 22</p>
+									<div class="addtocart-buynow-container">
+										<button class="addtocart-buynow-buttons" onclick="addToCart('Flower1', 22)">Add to Cart</button>
+										<button class="addtocart-buynow-buttons">Buy Now</button>
+									</div>
+								</div>
+							</div>
+							<div class="section1-flowers">
+								<img src="images/flower3.webp" loading="lazy" class="section1-small-images" alt="flower3">
+								<div class="section1-info">
+									<h2>Flower 3</h2>
+									<p>AUD 32</p>
+									<div class="addtocart-buynow-container">
+										<button class="addtocart-buynow-buttons" onclick="addToCart('Flower1', 32)">Add to Cart</button>
+										<button class="addtocart-buynow-buttons">Buy Now</button>
+									</div>
+								</div>
+							</div>
+							<div class="section1-flowers">
+								<img src="images/flower4.webp" loading="lazy" class="section1-small-images" alt="flower4">
+								<div class="section1-info">
+									<h2>Flower 4</h2>
+									<p>AUD 66</p>
+									<div class="addtocart-buynow-container">
+										<button class="addtocart-buynow-buttons" onclick="addToCart('Flower1', 66)">Add to Cart</button>
+										<button class="addtocart-buynow-buttons">Buy Now</button>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<button class="section1-buttons" onclick="nextFlower()">&#10095;</button>
+					</div>
+				</section>
+
+				<section id="flowers-list" class="wrapper style3">
+					<div class="title">Flowers</div>
+					<div class="section3-functions-container">
+						<p id="filters">
+							Filter:
+							<select id="filterDropdown" aria-label="filerDropdown">
+								<option value="All">All</option>
+								<option value="Romance">Romance</option>
+								<option value="Birthday">Birthday</option>
+								<option value="NewBaby">NewBaby</option>
+								<option value="Bouquet">Bouquet</option>
+								<option value="GetWell">GetWell</option>
+								<option value="Special">Special</option>
+								<option value="Sympathy">Sympathy</option>
+							</select>
+						</p>
+						<p id="showFlower">
+							Showing:
+							<select id="showDropdown" aria-label="filerDropdown">
+								<option value=4>4</option>
+								<option value=8>8</option>
+								<option value=12>12</option>
+								<option value=16>16</option>
+								<option value=20>20</option>
+							</select>
+						</p>
+					</div>
+					<div class="section3-flex-container">
+						<div class="section3-flex-items Romance">
+							<a href="#"><img src="images/flowerList1.webp" loading="lazy" class="section3-small-images" alt="list flower1">
+								<h3>Flower 1 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Sympathy">
+							<a href="#"><img src="images/flowerList2.webp" loading="lazy" class="section3-small-images" alt="list flower2">
+								<h3>Flower 2 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Romance">
+							<a href="#"><img src="images/flowerList3.webp" loading="lazy" class="section3-small-images" alt="list flower3">
+								<h3>Flower 3 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Special">
+							<a href="#"><img src="images/flowerList4.webp" loading="lazy" class="section3-small-images" alt="list flower4">
+								<h3>Flower 4 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items GetWell">
+							<a href="#"><img src="images/flowerList5.webp" loading="lazy" class="section3-small-images" alt="list flower5">
+								<h3>Flower 5 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Birthday">
+							<a href="#"><img src="images/flowerList6.webp" loading="lazy" class="section3-small-images" alt="list flower6">
+								<h3>Flower 6 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Romance">
+							<a href="#"><img src="images/flowerList7.webp" loading="lazy" class="section3-small-images" alt="list flower7">
+								<h3>Flower 7 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items NewBaby">
+							<a href="#"><img src="images/flowerList8.webp" loading="lazy" class="section3-small-images" alt="flower8">
+								<h3>Flower 8 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Romance">
+							<a href="#"><img src="images/flowerList9.webp" loading="lazy" class="section3-small-images" alt="list flower9">
+								<h3>Flower 9 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Sympathy">
+							<a href="#"><img src="images/flowerList10.webp" loading="lazy" class="section3-small-images" alt="list flower10">
+								<h3>Flower 10 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Bouquet">
+							<a href="#"><img src="images/flowerList11.webp" loading="lazy" class="section3-small-images" alt="list flower11">
+								<h3>Flower 11 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+						<div class="section3-flex-items Romance">
+							<a href="#"><img src="images/flowerList12.webp" loading="lazy" class="section3-small-images" alt="list flower12">
+								<h3>Flower 12 <br>
+									AUDxxx</h3>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="main" class="wrapper style2">
+					<div class="title">Asked Questions</div>
+					<div class="section2-flex-container">
+						<div class="section2-flex-items">
+							<h1>About Us</h1>
+								<h2>We are a small, family florist who want our customers to keep coming back. So we sell only the highest quality and freshest flowers. 
+									We know you are sending flowers to someone special and they deserve the best. We also know that if our flowers are fresh and last a 
+									long time so will our good relationship with our customers. We take great care of the flowers up to the time we deliver them to you 
+									and then we provide advice on how to keep those flowers looking fresh for at least a week.</h2>
+						</div>
+						<div class="section2-flex-items">
+							<h1>Our Services</h1>
+								<ul>
+									<li><h2>Open 7 days until late</h2></li>
+									<li><h2>Quality fresh cut flowers & arrangements for all occasions</h2></li>
+									<li><h2>Deliveries to Melbourne metro areas</h2></li>
+									<li><h2>Large selection of silk flowers, pots, vases & teddy bears</h2></li>
+									<li><h2>EFTPOS & major credit cards accepted</h2></li>
+								</ul>
+						</div>
+						<div class="section2-flex-items">
+							<h1>Flower Delivery</h1>
+							<h2>We deliver to</h2>
+								<ul>
+									<li><h2>Monash Medical Center - Clayton and Moorabbin</h2></li>
+									<li><h2>Jessie McPherson Private Hospital</h2></li>
+									<li><h2>Monash Children's Hospital</h2></li>
+									<li><h2>Dandenong Hospital</h2></li>
+									<li><h2>The Valley Private Hospital</h2></li>
+									<li><h2>Monash University - Clayton and Caulfield Campus</h2></li>
+									<li><h2>Carbini Hospital</h2></li>
+									<li><h2>Springvale Botanical Cemetery</h2></li>
+									<li><h2>South Eastern Private Hospital</h2></li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+				<div id="contact" class="wrapper style4">
+					<div class="title">Contact Info</div>
+					<div class="section4-flex-container">
+						<div class="section4-flex-container-items">
+							<div class="section4-map-item">
+								<p class="location-word">Location</p>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.7059964155123!2d145.12686968534936!3d-37.91393416743208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b465da33a5d%3A0x84fe08dcb9c59ad6!2sMonash%20Clayton%20Bus%20Loop!5e0!3m2!1sen!2sau!4v1747495776708!5m2!1sen!2sau" title="googleMap" width="650" height="436" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+						<div class="section4-flex-container-items">
+							<div class="section4-list-item">
+								<p class="location-word">We'd Love to Hear From You</p>
+								<p>At Clayton, we deeply value to hear your Questions or FeedBack</p>
+								<p>Contact us either on <a href="#">+xx (x) xxxx xxxx</a>, via <a href="#">Email</a>, or through the form below 
+									for personalised assistance with all your floral and gifting needs</p>
+								<div>
+									<form method="post" action="#">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input type="text" name="name" id="contact-name" placeholder="Name">
+											</div>
+											<div class="col-6 col-12-small">
+												<input type="text" name="email" id="contact-email" placeholder="Email">
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="style1" value="Send"></li>
+													<li><input type="reset" class="style2" value="Reset"></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section id="footer" class="wrapper">
+					<div class="title">The Rest Of It</div>
+					<div class="footer-container">
+						<div class="footer-items">
+							<a href="index.html" class="footer-logo">The<br>Bloom<br>Room</a>
+						</div>
+						<div class="footer-items">
+							<h3>Quick Links</h3>
+							<div class="links-double-columns">
+								<div class="links-column">
+									<div class="link-item"><a href="#">Contact</a></div>
+									<div class="link-item"><a href="#">Flowers</a></div>
+									<div class="link-item"><a href="#">Delivery</a></div>
+									<div class="link-item"><a href="#">FAQ</a></div>
+								</div>
+								<div class="links-column">
+									<div class="link-item"><a href="#">Refunds</a></div>
+									<div class="link-item"><a href="#">Privacy</a></div>
+									<div class="link-item"><a href="#">Terms</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="footer-items">
+							<h3 class="icon solid fa-home">Address</h3>
+							<div class="link-item">1xx Clayton Road</div>
+							<div class="link-item">Clayton</div>
+							<div class="link-item">VIC 3168</div>
+						</div>
+						<div class="footer-items">	
+							<h3 class="icon solid fa-comment">Social</h3>
+								<div class="link-item"><a href="#">linkedin.com/thebloomroom</a></div>
+								<div class="link-item"><a href="#">instagram.com/thebloomroom</a></div>
+								<div class="link-item"><a href="#">facebook.com/thebloomroom</a></div>	
+						</div>
+						<div class="footer-items">
+							<h3 class="icon solid fa-envelope">Contact Details</h3>
+							<div class="link-item"><a href="#">thebloomroom@untitled.com</a></div>
+							<div class="link-item"><a href="#">+xx (x) xxxx xxxx</a></div>
+						</div>
+					</div>
+					<div id="copyright">
+						<p>2014-2025 &copy;The Bloom Room</p>
+					</div>
+				</section>
+		</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/script.js"></script>
+
+	</body>
+</html>
