@@ -77,6 +77,10 @@
 	width: 50%;
 }
 
+.addtocart-buynow-buttons:hover {
+	background: lightblue;
+}
+
 .section3-functions-container {
 	display: flex;
 	flex-direction: row;
