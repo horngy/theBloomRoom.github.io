@@ -216,7 +216,7 @@
 
 .dark-background.active {
 	z-index: 10005;
-	opacity: 0.2;
+	opacity: 0.4;
 	background: black;
 }
 
